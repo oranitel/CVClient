@@ -1,0 +1,46 @@
+<div class="contact-us">
+
+  <div class="container">
+    <div class="title">צור קשר</div>
+    <form [formGroup]="form" (ngSubmit)="saveDetails(form)" class="contact-form">
+      <mat-form-field>
+        <mat-label>שם פרטי</mat-label>
+        <input matInput name="given-name" inputmode="tel" placeholder="שם פרטי" formControlName="firstName" #firstNameInput>
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-hint> אותיות בלבד </mat-hint>
+        <mat-error *ngIf="form.hasError('required', 'firstName')">  חובה להזין שם פרטי </mat-error>
+        <mat-error *ngIf="form.hasError('pattern', 'firstName')">  ניתן להזין אותיות בלבד  </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>שם משפחה</mat-label>
+        <input matInput name="family-name" maxlength="15" inputmode="tel" placeholder="שם משפחה" formControlName="lastName" #lastNameInput>
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-hint> אותיות בלבד </mat-hint>
+        <mat-error *ngIf="form.hasError('required', 'lastName')">  חובה להזין שם משפחה </mat-error>
+        <mat-error *ngIf="form.hasError('pattern', 'lastName')">  ניתן להזין אותיות בלבד  </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>כתובת מייל</mat-label>
+        <input matInput name="email" type="email" formControlName="email" placeholder="המייל שלך">
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-error *ngIf="form.hasError('required', 'email')">חובה להזין כתובת מייל</mat-error>
+        <mat-error *ngIf="form.hasError('pattern', 'email')">נא להזין כתובת מייל תקינה</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>טלפון</mat-label>
+        <input matInput name="tel" type="phoneNum" formControlName="phoneNum">
+        <mat-icon matSuffix>phone_android</mat-icon>
+        <mat-error *ngIf="form.hasError('pattern', 'phoneNum')">ניתן להזין ספרות בלבד</mat-error>
+      </mat-form-field>
+
+
+
+      <div class="action" mat-dialog-actions>
+        <button mat-raised-button color="accent" type="submit" [disabled]="!form.valid">שלח</button>
+      </div>
+    </form>
+  </div>
+</div>

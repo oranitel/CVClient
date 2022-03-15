@@ -1,0 +1,61 @@
+.home {
+  display: flex;
+  flex-direction: row;
+}
+
+.personal-info {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+}
+
+.info-continer {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+mat-icon {
+  margin-left: 5px;
+  font-size: 18px;
+  color: #ff4081;
+
+}
+
+.title {
+  margin-left: 5px;
+  font-size: 20px;
+  padding-bottom: 7px;
+  color: #ff4081;
+
+}
+
+.info {
+  font-size: 20px;
+  padding-bottom: 7px;
+
+}
+
+.additional-data-title {
+  margin: 10px 0px;
+  color: #ff4081;
+  font-size: 20px;
+}
+
+.additional-data {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 2px solid #ff4081;
+  padding: 20px;
+  background-color: #ff40812e;
+}
+
+p {
+  font-size: 16px;
+
+}

@@ -1,0 +1,11 @@
+.title-icon {
+  margin-left: 5px;
+}
+
+mat-expansion-panel {
+  margin: 10px;
+}
+
+mat-expansion-panel-header {
+  background-color: #ff40812e;
+}

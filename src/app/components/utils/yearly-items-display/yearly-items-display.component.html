@@ -1,0 +1,21 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let yearlyItem of yearlyItems">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon class="title-icon">{{yearlyItem.icon}}</mat-icon>
+        {{yearlyItem.title}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab *ngFor="let items of yearlyItem.yearlyItem" [label]="items.from + (items.to? '-' + items.to: '')">
+        <mat-list>
+          <mat-list-item *ngFor="let item of items.items">
+            <mat-icon mat-list-icon>check_circle</mat-icon>
+            <div mat-line>{{item}}</div>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-expansion-panel>
+</mat-accordion>
